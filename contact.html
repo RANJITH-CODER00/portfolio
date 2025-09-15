@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ranjith P</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Font Awesome Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    /* ===== Navbar ===== */
+    nav {
+      width: 100%;
+      padding: 20px;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #00ffcc;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      margin: 0;
+      padding: 0 40px 0 0;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+    }
+
+    /* ===== Page Title ===== */
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      color: #00ffcc;
+      text-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+      text-align: center;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      font-size: 1rem;
+      background: #111;
+      color: #fff;
+      box-shadow: 0 0 10px #00ffcc inset;
+      transition: 0.3s;
+    }
+    .contact-container input:focus,
+    .contact-container textarea:focus {
+      box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff inset;
+    }
+
+    .contact-container button {
+      background: linear-gradient(90deg, #00ffcc, #0099ff);
+      color: #111;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+      transition: 0.3s;
+    }
+    .contact-container button:hover {
+      background: linear-gradient(90deg, #0099ff, #00ffcc);
+      box-shadow: 0 0 25px #00ffcc, 0 0 35px #0099ff;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      margin-top: 30px;
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .contact-info a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .contact-info a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #0099ff;
+    }
+    /* Navbar base */
+nav {
+  width: 100%;
+  padding: 20px;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0;
+  padding: 0 40px 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+}
+
+/* ===== Mobile Styles ===== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #00ffcc;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+  }
+
+  nav ul.show {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* show ☰ button */
+  }
+}
+
+  </style>
+</head>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
+
+<body>
+
+  <!-- Navbar -->
+<nav>
+  <h2 class="logo">Portfolio</h2>
+
+  <!-- Hamburger Menu Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul id="menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Title -->
+  <h1>Contact Me</h1>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <form action="https://formspree.io/f/mwpnaozw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> 
+         <a href="mailto:ranjithpugal8977@gmail.com">ranjithpugal8977@gmail.com</a>
+      </p>
+      <p><i class="fas fa-phone"></i> 
+         <a href="tel:+918778022134">+91 8778022134</a>
+      </p>
+      <p><i class="fab fa-instagram"></i> 
+         <a href="https://www.instagram.com/_._itz_me_tobi_._?igsh=MXY0MTZkYW1xcTNsbw==" target="_blank">@_._itz_me_tobi_._</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Script to auto-clear form -->
+  <script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault(); // stop normal refresh
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+        form.reset(); // clears input fields
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    });
+  </script>
+
+</body>
+</html>

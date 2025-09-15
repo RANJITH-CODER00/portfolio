@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ranjith P</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #000; /* Full black background */
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    /* ===== Navbar (same as other pages) ===== */
+    nav {
+      width: 100%;
+      padding: 20px;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: #00ffcc;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      margin: 0;
+      padding: 0 40px 0 0;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+    }
+
+    /* ===== Page Title ===== */
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      color: #00ffcc;
+      text-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+    }
+
+    /* ===== About Section ===== */
+    .about-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-container img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px #00ffcc, 0 0 40px #0099ff;
+      transition: transform 0.3s ease;
+    }
+    .about-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-container h2 {
+      color: #00ffcc;
+      margin-top: 20px;
+      text-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+    }
+
+    .about-container p {
+      color: #ccc;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .info-list li {
+      margin: 10px 0;
+      color: #fff;
+    }
+    .info-list span {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+    /* Navbar base */
+nav {
+  width: 100%;
+  padding: 20px;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0;
+  padding: 0 40px 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+}
+
+/* ===== Mobile Styles ===== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #00ffcc;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+  }
+
+  nav ul.show {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* show ☰ button */
+  }
+}
+
+  </style>
+</head>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
+
+<body>
+
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav>
+  <h2 class="logo">Portfolio</h2>
+
+  <!-- Hamburger Menu Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul id="menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Title -->
+  <h1>About Me</h1>
+
+  <!-- About Section -->
+  <div class="about-container">
+    <img src="assets/photo.jpg" alt="Ranjith P">
+
+    <h2>Hello! I'm Ranjith P</h2>
+    <p>
+      I am a Computer Science Engineering student, currently in my II Year at Maha Barathi Engineering College.  
+      I am passionate about web development, programming, and creating innovative solutions through technology.
+    </p>
+
+    <ul class="info-list">
+      <li><span>Name:</span> Ranjith P</li>
+      <li><span>Education:</span> B.E. CSE (II Year)</li>
+      <li><span>College:</span> Maha Barathi Engineering College</li>
+      <li><span>Skills:</span> C, C++, Python, HTML, CSS, MySQL</li>
+    </ul>
+
+    <h2>My Career Objective</h2>
+    <p>
+      To become a skilled full stack developer,building impactful applications and advancing my technical expertise.
+    </p>
+
+    <h2>Strengths</h2>
+    <p>
+      ✔ Good listening skill <br>
+      ✔ Teamwork <br>
+      ✔ Punctuality <br>
+      ✔ Eager to learn new skills and things
+    </p>
+
+    <h2>Hobbies</h2>
+    <p>🎮 Playing games | 🎵 Listening to music | 🎬 Watching anime</p>
+  </div>
+
+</body>
+</html>

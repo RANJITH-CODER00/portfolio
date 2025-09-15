@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Ranjith P</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+        nav {
+      width: 100%;
+      padding: 20px;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    
+    nav .logo {
+      color: #00ffcc;
+      font-size: 20px;
+      font-weight: bold;
+    }
+   nav ul {
+  list-style: none;
+  display: flex;         /* makes items side by side */
+  flex-direction: row;   /* ensure horizontal layout */
+  gap: 15px;             /* spacing between items */
+  margin: 0;
+  padding: 0 40px 0 0;   /* move slightly left */
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+
+    
+    nav ul li a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      width: 80%;
+      margin: 60px auto;
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      color: #00ffcc;
+    }
+    .skill {
+      margin-bottom: 30px;
+    }
+    .skill h3 {
+      margin-bottom: 8px;
+      color: #00ffcc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .skill h3 i {
+      color: #00ffcc;
+      font-size: 1.4rem;
+    }
+    .progress-bar {
+      width: 100%;
+      background: #222;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+    }
+    .progress {
+      height: 22px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #00ffcc, #0099ff);
+      text-align: right;
+      padding-right: 10px;
+      color: #111;
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 22px;
+      width: 0; /* Start hidden */
+      transition: width 2s ease-in-out;
+      box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+    }
+    /* Navbar base */
+nav {
+  width: 100%;
+  padding: 20px;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0;
+  padding: 0 40px 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+}
+
+/* ===== Mobile Styles ===== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #00ffcc;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc, 0 0 25px #0099ff;
+  }
+
+  nav ul.show {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* show ☰ button */
+  }
+}
+
+  </style>
+</head>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
+
+<body>
+
+  <!-- Navbar -->
+<nav>
+  <h2 class="logo">Portfolio</h2>
+
+  <!-- Hamburger Menu Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul id="menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h1>My Skills</h1>
+    <div class="skills-container">
+
+      <div class="skill">
+        <h3><i class="fas fa-code"></i> C</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="85%">85%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3><i class="fas fa-laptop-code"></i> C++</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="80%">80%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3><i class="fab fa-python"></i> Python</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="75%">75%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3><i class="fab fa-html5"></i> HTML</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="90%">90%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3><i class="fab fa-css3-alt"></i> CSS</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="85%">85%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3><i class="fas fa-database"></i> MySQL (Basic)</h3>
+        <div class="progress-bar">
+          <div class="progress" data-width="60%">60%</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Animation Script -->
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".progress").forEach(bar => {
+        bar.style.width = bar.getAttribute("data-width");
+      });
+    });
+  </script>
+
+</body>
+</html>
